@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.swapnil.squareonemenu" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity_chipotle"
+            android:label="@string/title_activity_activity_chipotle" >
+        </activity>
+        <activity
+            android:name=".chipotle"
+            android:label="@string/title_activity_chipotle" >
+        </activity>
+        <activity
+            android:name=".AW"
+            android:label="@string/title_activity_aw" >
+        </activity>
+        <activity
+            android:name=".Amaya_Express"
+            android:label="@string/title_activity_amaya__express" >
+        </activity>
+        <activity
+            android:name=".Basil_Box"
+            android:label="@string/title_activity_basil__box" >
+        </activity>
+        <activity
+            android:name=".Big_Smoke_Burger"
+            android:label="@string/title_activity_big__smoke__burger" >
+        </activity>
+        <activity
+            android:name=".Bourbon_Street_Grill"
+            android:label="@string/title_activity_bourbon__street__grill" >
+        </activity>
+        <activity
+            android:name=".burger_king"
+            android:label="@string/title_activity_burger_king" >
+        </activity>
+        <activity
+            android:name=".Charleys_Steakery"
+            android:label="@string/title_activity_charleys__steakery" >
+        </activity>
+        <activity
+            android:name=".cinnabon"
+            android:label="@string/title_activity_cinnabon" >
+        </activity>
+        <activity
+            android:name=".cultures"
+            android:label="@string/title_activity_cultures" >
+        </activity>
+        <activity
+            android:name=".Dairy_Queen_Orange_Julius"
+            android:label="@string/title_activity_dairy__queen__orange__julius" >
+        </activity>
+        <activity
+            android:name=".Jimmy_The_Greek"
+            android:label="@string/title_activity_jimmy__the__greek" >
+        </activity>
+        <activity
+            android:name=".KFC"
+            android:label="@string/title_activity_kfc" >
+        </activity>
+        <activity
+            android:name=".Manchu_Wok"
+            android:label="@string/title_activity_manchu__wok" >
+        </activity>
+        <activity
+            android:name=".New_York_Fries"
+            android:label="@string/title_activity_new__york__fries" >
+        </activity>
+        <activity
+            android:name=".Shanghai_360"
+            android:label="@string/title_activity_shanghai_360" >
+        </activity>
+        <activity
+            android:name=".Starbucks"
+            android:label="@string/title_activity_starbucks" >
+        </activity>
+        <activity
+            android:name=".Su_Shi"
+            android:label="@string/title_activity_su__shi" >
+        </activity>
+        <activity
+            android:name=".Sushi_O"
+            android:label="@string/title_activity_sushi__o" >
+        </activity>
+        <activity
+            android:name=".Szechuan_Express"
+            android:label="@string/title_activity_szechuan__express" >
+        </activity>
+        <activity
+            android:name=".Taco_Bell"
+            android:label="@string/title_activity_taco__bell" >
+        </activity>
+        <activity
+            android:name=".Teriyaki_Experience"
+            android:label="@string/title_activity_teriyaki__experience" >
+        </activity>
+        <activity
+            android:name=".Thai_Express"
+            android:label="@string/title_activity_thai__express" >
+        </activity>
+        <activity
+            android:name=".Villa_Madina"
+            android:label="@string/title_activity_villa__madina" >
+        </activity>
+    </application>
+
+</manifest>
