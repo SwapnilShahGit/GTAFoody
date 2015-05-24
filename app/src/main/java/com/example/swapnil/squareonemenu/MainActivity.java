@@ -24,7 +24,8 @@ public class MainActivity extends Activity {
             "Szechuan Express", "Taco Bell", "Teriyaki Experience", "Thai Express", "Villa Madina"};
 
     private Hashtable<String, String> foodTable  = new Hashtable<String, String>();
-    
+
+
 
     private ListView monthsListView;
     private ArrayAdapter arrayAdapter;
