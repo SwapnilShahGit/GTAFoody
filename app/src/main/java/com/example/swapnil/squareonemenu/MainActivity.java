@@ -97,8 +97,8 @@ public class MainActivity extends Activity {
                         return "com.example.swapnil.squareonemenu.cinnabon";
                     case "Cultures":
                         return "com.example.swapnil.squareonemenu.cultures";
-                    case "Dairy Queen/Orange Julius":
-                        return "com.example.swapnil.squareonemenu.Dairy_Queen_Orange_Julius";
+                    case "Dairy Queen":
+                        return "com.example.swapnil.squareonemenu.Dairy_Queen";
                     case "Jimmy The Greek":
                         return "com.example.swapnil.squareonemenu.Jimmy_The_Greek";
                     case "KFC":

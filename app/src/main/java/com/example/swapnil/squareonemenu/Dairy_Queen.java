@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import com.example.swapnil.squareonemenu.R;
 
 
-public class Dairy_Queen_Orange_Julius extends ActionBarActivity {
+public class Dairy_Queen extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
