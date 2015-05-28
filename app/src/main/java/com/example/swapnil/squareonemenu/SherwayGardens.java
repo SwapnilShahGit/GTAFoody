@@ -14,9 +14,20 @@ import android.widget.ListView;
 
 
 public class SherwayGardens extends Activity {
-    String[] list_restaurants = { "Coming Soon"};
+    String[] list_restaurants = { "Bento", "Caribbean Queen", "Crepe Delicious", "Cultures",
+            "Famous Wok", "Hero Burger", "Jimmy The Greek", "McDonald's", "Michel's Baguette",
+    "New York Fries", "Subway", "Taco Bell", "KFC", "Teriyaki Experience", "Thai Express",
+    "Tim Hortons", "Villa Madina"};
 
-    Integer[] imageId = {R.drawable.image};
+    Integer[] imageId = {R.drawable.image, R.drawable.image2, R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,};
 
 
     ListView foodyListView;

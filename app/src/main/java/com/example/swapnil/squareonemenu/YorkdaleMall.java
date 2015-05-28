@@ -14,9 +14,37 @@ import android.widget.ListView;
 
 
 public class YorkdaleMall extends Activity {
-    String[] list_restaurants = { "Coming Soon"};
+    String[] list_restaurants = { "A&W", "Amaya Express", "Big Smoke Burger", "Booster Juice",
+    "Chipotle Mexican Grill", "DAVIDsTEA", "Espressamente illy", "Famoso Neapolitan Pizzeria",
+    "Freshly Squeezed", "Godiva Chocolatier", "Holts Cafe", "Jamba Juice", "Jimmy The Greek",
+    "Kernels Popcorn", "KFC", "La Paloma Gelateria & Cafe", "Mac's Sushi", "Manchu Wok",
+    "MICHEL's Bakery Cafe", "MII Sandwich Store", "Milestone's Grill & Bar", "Moxie's Classic Grill"
+    , "New York Fries", "Pickel Barrel Grand", "Purdys Chocolatier", "Second Cup", "Shanghai 360",
+    "Starbucks", "Subway", "SU&SHI Noodle Bar", "Teavana", "Ten Ren's Tea Time",
+            "Teriyaki Experience", "Thai Express", "Tim Hortons", "Villa Madina", "Yogen Fruz"};
 
-    Integer[] imageId = {R.drawable.image};
+    Integer[] imageId = {R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,
+            
+
+    };
 
 
     ListView foodyListView;
