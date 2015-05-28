@@ -41,6 +41,7 @@ public class MainActivity extends Activity {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String item = String.valueOf(parent.getItemAtPosition(position));
                         //Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
+                        //switchActivity(MainActivity.class, item);
                         switch (item) {
                             case "Square One":
                                 startActivity(new Intent(MainActivity.this, SquareOne.class));
@@ -74,4 +75,8 @@ public class MainActivity extends Activity {
                     ;
                 });
     }
+
+    //public void switchActivity(class classname, char item){
+
+    //}
 }
