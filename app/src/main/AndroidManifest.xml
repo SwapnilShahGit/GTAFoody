@@ -152,6 +152,10 @@
             android:name=".FreshlySqueezed"
             android:label="@string/title_activity_freshly_squeezed" >
         </activity>
+        <activity
+            android:name=".Orange_Julius"
+            android:label="@string/title_activity_orange__julius" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,38 +1,61 @@
 package com.example.swapnil.squareonemenu;
 
-import android.support.v7.app.ActionBarActivity;
+/**
+ * Created by Swapnil on 5/28/2015.
+ */
+
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 
-public class SherwayGardens extends ActionBarActivity {
+public class SherwayGardens extends Activity {
+    String[] list_restaurants = { "Coming Soon"};
+
+    Integer[] imageId = {R.drawable.image};
+
+
+    ListView foodyListView;
+    ArrayAdapter foodyAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sherway_gardens);
-    }
+        setContentView(R.layout.activity_main);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_sherway_gardens, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        // this-The current activity context.
+        // Second param is the resource Id for list layout row item
+        // Third param is input array
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        foodyAdapter = new CustomAdapter(this, list_restaurants, imageId);
 
-        return super.onOptionsItemSelected(item);
-    }
+        foodyListView = (ListView) findViewById(R.id.foodyListView);
+
+        foodyListView.setAdapter(foodyAdapter);
+
+        foodyListView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        String NameOfRow = String.valueOf(parent.getItemAtPosition(position));
+                        //Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
+                        try {
+                            String NameOfClassString = MainActivity.switchActivity(NameOfRow);
+                            Class NameOfClass = Class.forName(NameOfClassString);
+                            startActivity(new Intent(SherwayGardens.this, NameOfClass));
+                        }
+                        catch (ClassNotFoundException e){
+                            startActivity(new Intent(SherwayGardens.this, Starbucks.class));
+                        }
+                    }
+                });
+
+
+    };
 }

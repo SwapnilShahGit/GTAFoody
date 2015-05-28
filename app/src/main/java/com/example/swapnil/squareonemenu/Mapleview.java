@@ -53,20 +53,19 @@ public class Mapleview extends Activity {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        String item = String.valueOf(parent.getItemAtPosition(position));
+                        String NameOfRow = String.valueOf(parent.getItemAtPosition(position));
                         //Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
-                        switch (item) {
-                            case "Amaya Express":
-                                startActivity(new Intent(Mapleview.this, Amaya_Express.class));
-                                break;
-                            case "A&W":
-                                startActivity(new Intent(Mapleview.this, AW.class));
-                                break;
-
+                        try {
+                            String NameOfClassString = MainActivity.switchActivity(NameOfRow);
+                            Class NameOfClass = Class.forName(NameOfClassString);
+                            startActivity(new Intent(Mapleview.this, NameOfClass));
+                        }
+                        catch (ClassNotFoundException e){
+                            startActivity(new Intent(Mapleview.this, Starbucks.class));
                         }
                     }
-
-                    ;
                 });
-    }
+
+
+    };
 }

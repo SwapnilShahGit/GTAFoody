@@ -14,16 +14,16 @@ import android.widget.ListView;
 
 
 public class ErinMillsTownCentre extends Activity {
-    String[] list_restaurants = { "A&W", "Bourbon St Grill", "Dairy Queen", "Fit for Life",
+    String[] list_restaurants = { "A&W", "Bourbon Street Grill", "Dairy Queen", "Fit for Life",
             "Fresh East", "Hero Burgers", "Jimmy The Greek", "KFC", "Mac's Sushi", "New York Fries",
-    "Starbucks Coffee", "Subway", "Taco Bell/KFC", "Teriyaki Experience", "Thai Express",
+    "Starbucks Coffee", "Subway", "Taco Bell", "KFC", "Teriyaki Experience", "Thai Express",
             "Tim Horton's", "Tim Horton's/Wendy's"};
 
     Integer[] imageId = {R.drawable.image, R.drawable.image2,R.drawable.image,
             R.drawable.image2,R.drawable.image, R.drawable.image2,R.drawable.image,
             R.drawable.image2,R.drawable.image, R.drawable.image2,R.drawable.image,
             R.drawable.image2,R.drawable.image, R.drawable.image2,R.drawable.image,
-            R.drawable.image2,R.drawable.image,};
+            R.drawable.image2,R.drawable.image, R.drawable.image};
 
 
     ListView foodyListView;
@@ -50,20 +50,19 @@ public class ErinMillsTownCentre extends Activity {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        String item = String.valueOf(parent.getItemAtPosition(position));
+                        String NameOfRow = String.valueOf(parent.getItemAtPosition(position));
                         //Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
-                        switch (item) {
-                            case "Amaya Express":
-                                startActivity(new Intent(ErinMillsTownCentre.this, Amaya_Express.class));
-                                break;
-                            case "A&W":
-                                startActivity(new Intent(ErinMillsTownCentre.this, AW.class));
-                                break;
-
+                        try {
+                            String NameOfClassString = MainActivity.switchActivity(NameOfRow);
+                            Class NameOfClass = Class.forName(NameOfClassString);
+                            startActivity(new Intent(ErinMillsTownCentre.this, NameOfClass));
+                        }
+                        catch (ClassNotFoundException e){
+                            startActivity(new Intent(ErinMillsTownCentre.this, Starbucks.class));
                         }
                     }
-
-                    ;
                 });
-    }
+
+
+    };
 }
