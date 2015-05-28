@@ -11,7 +11,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-    String[] list_restaurants = {"A&W", "Amaya Express"};
+    String[] list_restaurants = {"Burrito Bowl", "Amaya Express"};
 
     Integer[] imageId = {R.drawable.image, R.drawable.image2};
 
