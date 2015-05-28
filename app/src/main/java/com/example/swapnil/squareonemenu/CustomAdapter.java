@@ -10,9 +10,10 @@ import android.widget.TextView;
 
 class CustomAdapter extends ArrayAdapter<String> {
 
-    CustomAdapter(Context context, String[] restaurants, int 2) {
+    Integer[] imageId = {R.drawable.image, R.drawable.image2};
+    CustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
-        super(context, R.layout.custom_row ,restaurants);
+        super(context, R.layout.custom_row, restaurants);
     }
 
     @Override
@@ -21,6 +22,7 @@ class CustomAdapter extends ArrayAdapter<String> {
         View customView = foodyInflater.inflate(R.layout.custom_row, parent, false);
 
         String singleFoodItem = getItem(position);
+
         TextView foodyText = (TextView) customView.findViewById(R.id.foodyText);
 
         ImageView foodyImage = (ImageView) customView.findViewById(R.id.foodyImage); //buckysImage is after the .id
@@ -28,7 +30,7 @@ class CustomAdapter extends ArrayAdapter<String> {
 
         foodyText.setText(singleFoodItem);
 
-        foodyImage.setImageResource(R.drawable.image);
+        foodyImage.setImageResource(imageId[position]);
         return customView;
     }
 }
