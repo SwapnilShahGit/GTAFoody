@@ -38,10 +38,12 @@ public class MainActivity extends Activity {
         foodyListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) throws ClassNotFoundException{
                         String item = String.valueOf(parent.getItemAtPosition(position));
                         //Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
-                        switchActivity(MainActivity.class, item);
+                        Class item2 = Class.forName(item);
+
+                        startActivity(new Intent(MainActivity.this, item2));
 
                     }
 
@@ -50,34 +52,4 @@ public class MainActivity extends Activity {
     }
 
 
-    public void switchActivity(Class className, String item) {
-        switch (item) {
-            case "Square One":
-                startActivity(new Intent(MainActivity.this, SquareOne.class));
-                break;
-            case "Mapleview":
-                startActivity(new Intent(MainActivity.this, Mapleview.class));
-                break;
-            case "Erin Mills Centre":
-                startActivity(new Intent(MainActivity.this,
-                        ErinMillsTownCentre.class));
-                break;
-            case "Burlington Mall":
-                startActivity(new Intent(MainActivity.this,
-                        BurlingtonMall.class));
-                break;
-            case "Eaton Centre":
-                startActivity(new Intent(MainActivity.this,
-                        EatonCentre.class));
-                break;
-            case "Sherway Gardens":
-                startActivity(new Intent(MainActivity.this,
-                        SherwayGardens.class));
-                break;
-            case "Yorkdale Mall":
-                startActivity(new Intent(MainActivity.this,
-                        YorkdaleMall.class));
-                break;
-        }
-    }
 }
