@@ -10,8 +10,9 @@ import android.widget.TextView;
 
 class CustomAdapter extends ArrayAdapter<String> {
 
-    Integer[] imageId = {R.drawable.image, R.drawable.image2, R.drawable.image,R.drawable.image,
-            R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image, R.drawable.image2,
+    Integer[] imageId = {R.drawable.aw, R.drawable.amaya, R.drawable.bigsmokeburger,
+            R.drawable.boosterjuice,
+            R.drawable.chipotle,R.drawable.image,R.drawable.image,R.drawable.image, R.drawable.image2,
             R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,
             R.drawable.image, R.drawable.image2, R.drawable.image,R.drawable.image,R.drawable.image,
             R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,

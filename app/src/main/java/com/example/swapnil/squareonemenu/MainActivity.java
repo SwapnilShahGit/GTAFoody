@@ -130,7 +130,7 @@ public class MainActivity extends Activity {
                     case "Freshly Squeezed":
                         return "com.example.swapnil.squareonemenu.FreshlySqueezed";
                 }
-                return "KFC";
+                return "Not matching string";
             }
 
 }

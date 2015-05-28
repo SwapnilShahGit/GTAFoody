@@ -23,7 +23,7 @@ public class YorkdaleMall extends Activity {
     "Starbucks", "Subway", "SU&SHI Noodle Bar", "Teavana", "Ten Ren's Tea Time",
             "Teriyaki Experience", "Thai Express", "Tim Hortons", "Villa Madina", "Yogen Fruz"};
 
-    Integer[] imageId = {R.drawable.image, R.drawable.image2,
+    Integer[] imageId = {R.drawable.aw, R.drawable.amaya,
             R.drawable.image, R.drawable.image2,
             R.drawable.image, R.drawable.image2,
             R.drawable.image, R.drawable.image2,
