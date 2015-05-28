@@ -14,9 +14,20 @@ import android.widget.ListView;
 
 
 public class EatonCentre extends Activity {
-    String[] list_restaurants = { "Coming Soon"};
+    String[] list_restaurants = { "A&W", "Akashiro by SUSHI Q", "Amaya Express",
+            "Aroma Espresso Bar", "Big Smoke Burger", "Bourbon Street Grill", "Crepe Delicious",
+    "Froshberg Gelato", "Extreme Pita", "Fast Fresh Foods", "Jimmy The Greek", "KFC",
+            "Liberty Noodle", "McDonald's", "Mucho Burrito", "New York Fries", "Ruby Thai Kitchen",
+    "Shanghai 360", "Sbarro", "Subway", "Szechuan Express", "Teriyaki Experience", "Thai Express",
+    "Tim Hortons", "Urban Herbivore", "Villa Madina"};
 
-    Integer[] imageId = {R.drawable.image};
+    Integer[] imageId = {R.drawable.image, R.drawable.image2, R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,R.drawable.image, R.drawable.image2,
+            R.drawable.image, R.drawable.image2,};
 
 
     ListView foodyListView;

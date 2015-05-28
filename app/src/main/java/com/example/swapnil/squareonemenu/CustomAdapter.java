@@ -15,6 +15,9 @@ class CustomAdapter extends ArrayAdapter<String> {
             R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,
             R.drawable.image, R.drawable.image2, R.drawable.image,R.drawable.image,R.drawable.image,
             R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,
+            R.drawable.image,R.drawable.image, R.drawable.image,R.drawable.image,
+            R.drawable.image,R.drawable.image, R.drawable.image,R.drawable.image,
+            R.drawable.image,R.drawable.image, R.drawable.image,R.drawable.image,
             R.drawable.image,R.drawable.image};
     CustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
