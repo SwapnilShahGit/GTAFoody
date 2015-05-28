@@ -6,9 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import Food.AW;
+import Food.Amaya_Express;
+import Food.Basil_Box;
+import Food.Big_Smoke_Burger;
+import Food.Bourbon_Street_Grill;
 
 public class MainActivity extends Activity {
     String[] list_restaurants = {"Burrito Bowl", "Amaya Express"};
