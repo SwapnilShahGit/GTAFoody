@@ -42,7 +42,7 @@ public class YorkdaleMall extends Activity {
             R.drawable.image, R.drawable.image2,R.drawable.image, R.drawable.image2,
             R.drawable.image, R.drawable.image2,
             R.drawable.image, R.drawable.image2,
-            
+
 
     };
 
