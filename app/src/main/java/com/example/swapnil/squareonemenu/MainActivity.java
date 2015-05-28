@@ -6,55 +6,58 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-import java.util.Hashtable;
-
-
 
 public class MainActivity extends Activity {
+    private String[] list_restaurants = {"A&W", "Amaya Express"};
 
 
-    private String[] monthsArray = { "A&W", "Amaya Express",
-            "Basil Box", "Big Smoke Burger", "Bourbon Street Grill", "Burger King",
-            "Charley's Steakery", "Chipotle", "Cinnabon",
-            "Cultures", "Dairy Queen/Orange Julius", "Jimmy The Greek", "KFC", "Manchu Wok",
-            "Mrs.Vanelli's", "New York Fries", "Shanghai 360", "Starbucks", "Su & Shi", "Sushi-Q",
-            "Szechuan Express", "Taco Bell", "Teriyaki Experience", "Thai Express", "Villa Madina"};
+    private ListView foodyListView;
+    private ArrayAdapter foodyAdapter;
 
-    private Hashtable<String, String> foodTable  = new Hashtable<String, String>();
-
-
-
-    private ListView monthsListView;
-    private ArrayAdapter arrayAdapter;
-
-
-
-    /** Called when the activity is first created. */
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        monthsListView = (ListView) findViewById(R.id.months_list);
 
+        foodyListView = (ListView) findViewById(R.id.foodyListView);
         // this-The current activity context.
         // Second param is the resource Id for list layout row item
         // Third param is input array
-        arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, monthsArray);
-        monthsListView.setAdapter(arrayAdapter);
 
-        monthsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String item = ((TextView)view).getText().toString();
+        foodyAdapter = new CustomAdapter(this, list_restaurants);
 
-                //Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
+        foodyListView = (ListView) findViewById(R.id.foodyListView);
 
-                startActivity(new Intent(MainActivity.this, chipotle.class));
-            }
-        });
-    }
+        foodyListView.setAdapter(foodyAdapter);
+
+        foodyListView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener(){
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        String item = String.valueOf(parent.getItemAtPosition(position));
+                        //Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
+                        switch(item) {
+                        case "Amaya Express":
+                        startActivity(new Intent(MainActivity.this, Amaya_Express.class));
+                        break;
+                        case "A&W":
+                        startActivity(new Intent(MainActivity.this, AW.class));
+                        break;
+                        case "Basil Box":
+                        startActivity(new Intent(MainActivity.this, Basil_Box.class));
+                        break;
+                        case "Big Smoke Burger":
+                        startActivity(new Intent(MainActivity.this, Big_Smoke_Burger.class));
+                        break;
+                        case "Bourbon Street Grill":
+                        startActivity(new Intent(MainActivity.this, Bourbon_Street_Grill.class));
+                        break;
+                    }
+                }
+    });
+}
 }

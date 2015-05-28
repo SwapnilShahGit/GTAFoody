@@ -116,6 +116,10 @@
             android:name=".Villa_Madina"
             android:label="@string/title_activity_villa__madina" >
         </activity>
+        <activity
+            android:name=".Mrs_Vanellis"
+            android:label="@string/title_activity_mrs__vanellis" >
+        </activity>
     </application>
 
 </manifest>
