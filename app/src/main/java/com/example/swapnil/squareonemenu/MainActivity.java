@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
                 });
     }
 
-    //public void switchActivity(class classname, char item){
+    public void switchActivity(class classname, char item){
 
-    //}
+    }
 }
