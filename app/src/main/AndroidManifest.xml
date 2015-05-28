@@ -120,6 +120,34 @@
             android:name=".Mrs_Vanellis"
             android:label="@string/title_activity_mrs__vanellis" >
         </activity>
+        <activity
+            android:name=".BurlingtonMall"
+            android:label="@string/title_activity_burlington_mall" >
+        </activity>
+        <activity
+            android:name=".SquareOne"
+            android:label="@string/title_activity_square_one" >
+        </activity>
+        <activity
+            android:name=".Mapleview"
+            android:label="@string/title_activity_mapleview" >
+        </activity>
+        <activity
+            android:name=".ErinMillsTownCentre"
+            android:label="@string/title_activity_erin_mills_town_centre" >
+        </activity>
+        <activity
+            android:name=".EatonCentre"
+            android:label="@string/title_activity_eaton_centre" >
+        </activity>
+        <activity
+            android:name=".SherwayGardens"
+            android:label="@string/title_activity_sherway_gardens" >
+        </activity>
+        <activity
+            android:name=".YorkdaleMall"
+            android:label="@string/title_activity_yorkdale_mall" >
+        </activity>
     </application>
 
 </manifest>

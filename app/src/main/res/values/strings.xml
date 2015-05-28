@@ -29,4 +29,11 @@
     <string name="title_activity_thai__express">Thai_Express</string>
     <string name="title_activity_villa__madina">Villa_Madina</string>
     <string name="title_activity_mrs__vanellis">Mrs_Vanellis</string>
+    <string name="title_activity_mapleview">Mapleview</string>
+    <string name="title_activity_burlington_mall">BurlingtonMall</string>
+    <string name="title_activity_square_one">SquareOne</string>
+    <string name="title_activity_erin_mills_town_centre">ErinMillsTownCentre</string>
+    <string name="title_activity_eaton_centre">EatonCentre</string>
+    <string name="title_activity_sherway_gardens">SherwayGardens</string>
+    <string name="title_activity_yorkdale_mall">YorkdaleMall</string>
 </resources>
