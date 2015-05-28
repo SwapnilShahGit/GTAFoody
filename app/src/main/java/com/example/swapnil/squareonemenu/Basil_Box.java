@@ -1,4 +1,4 @@
-package Food;
+package com.example.swapnil.squareonemenu;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,18 +8,18 @@ import android.view.MenuItem;
 import com.example.swapnil.squareonemenu.R;
 
 
-public class cultures extends ActionBarActivity {
+public class Basil_Box extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_culture);
+        setContentView(R.layout.activity_basil__box);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_culture, menu);
+        getMenuInflater().inflate(R.menu.menu_basil__box, menu);
         return true;
     }
 

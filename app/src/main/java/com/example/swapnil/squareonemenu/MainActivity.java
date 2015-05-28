@@ -8,14 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import Food.AW;
-import Food.Amaya_Express;
-import Food.Basil_Box;
-import Food.Big_Smoke_Burger;
-import Food.Bourbon_Street_Grill;
-
 public class MainActivity extends Activity {
-    String[] list_restaurants = {"Burrito Bowl", "Amaya Express"};
+    String[] list_restaurants = {"A&W", "Amaya Express"};
 
     Integer[] imageId = {R.drawable.image, R.drawable.image2};
 
@@ -41,29 +35,23 @@ public class MainActivity extends Activity {
         foodyListView.setAdapter(foodyAdapter);
 
         foodyListView.setOnItemClickListener(
-                new AdapterView.OnItemClickListener(){
+                new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String item = String.valueOf(parent.getItemAtPosition(position));
                         //Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
-                        switch(item) {
+                        switch (item) {
                             case "Amaya Express":
                                 startActivity(new Intent(MainActivity.this, Amaya_Express.class));
                                 break;
                             case "A&W":
                                 startActivity(new Intent(MainActivity.this, AW.class));
                                 break;
-                            case "Basil Box":
-                                startActivity(new Intent(MainActivity.this, Basil_Box.class));
-                                break;
-                            case "Big Smoke Burger":
-                                startActivity(new Intent(MainActivity.this, Big_Smoke_Burger.class));
-                                break;
-                            case "Bourbon Street Grill":
-                                startActivity(new Intent(MainActivity.this, Bourbon_Street_Grill.class));
-                                break;
+
                         }
                     }
+
+                    ;
                 });
     }
 }

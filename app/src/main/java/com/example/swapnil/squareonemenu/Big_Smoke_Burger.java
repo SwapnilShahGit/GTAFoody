@@ -1,4 +1,4 @@
-package Food;
+package com.example.swapnil.squareonemenu;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,18 +8,18 @@ import android.view.MenuItem;
 import com.example.swapnil.squareonemenu.R;
 
 
-public class Su_Shi extends ActionBarActivity {
+public class Big_Smoke_Burger extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_su__shi);
+        setContentView(R.layout.activity_big__smoke__burge);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_su__shi, menu);
+        getMenuInflater().inflate(R.menu.menu_big__smoke__burge, menu);
         return true;
     }
 

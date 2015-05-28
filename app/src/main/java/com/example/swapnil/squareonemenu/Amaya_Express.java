@@ -1,4 +1,4 @@
-package Food;
+package com.example.swapnil.squareonemenu;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,18 +8,18 @@ import android.view.MenuItem;
 import com.example.swapnil.squareonemenu.R;
 
 
-public class Manchu_Wok extends ActionBarActivity {
+public class Amaya_Express extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manchu__wok);
+        setContentView(R.layout.activity_amaya_express);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_manchu__wok, menu);
+        getMenuInflater().inflate(R.menu.menu_amaya__express, menu);
         return true;
     }
 

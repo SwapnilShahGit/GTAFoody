@@ -21,103 +21,103 @@
             android:label="@string/title_activity_activity_chipotle" >
         </activity>
         <activity
-            android:name="Food.chipotle"
+            android:name=".chipotle"
             android:label="@string/title_activity_chipotle" >
         </activity>
         <activity
-            android:name="Food.AW"
+            android:name=".AW"
             android:label="@string/title_activity_aw" >
         </activity>
         <activity
-            android:name="Food.Amaya_Express"
+            android:name=".Amaya_Express"
             android:label="@string/title_activity_amaya__express" >
         </activity>
         <activity
-            android:name="Food.Basil_Box"
+            android:name=".Basil_Box"
             android:label="@string/title_activity_basil__box" >
         </activity>
         <activity
-            android:name="Food.Big_Smoke_Burger"
+            android:name=".Big_Smoke_Burger"
             android:label="@string/title_activity_big__smoke__burger" >
         </activity>
         <activity
-            android:name="Food.Bourbon_Street_Grill"
+            android:name=".Bourbon_Street_Grill"
             android:label="@string/title_activity_bourbon__street__grill" >
         </activity>
         <activity
-            android:name="Food.burger_king"
+            android:name=".burger_king"
             android:label="@string/title_activity_burger_king" >
         </activity>
         <activity
-            android:name="Food.Charleys_Steakery"
+            android:name=".Charleys_Steakery"
             android:label="@string/title_activity_charleys__steakery" >
         </activity>
         <activity
-            android:name="Food.cinnabon"
+            android:name=".cinnabon"
             android:label="@string/title_activity_cinnabon" >
         </activity>
         <activity
-            android:name="Food.cultures"
+            android:name=".cultures"
             android:label="@string/title_activity_cultures" >
         </activity>
         <activity
-            android:name="Food.Dairy_Queen_Orange_Julius"
+            android:name=".Dairy_Queen_Orange_Julius"
             android:label="@string/title_activity_dairy__queen__orange__julius" >
         </activity>
         <activity
-            android:name="Food.Jimmy_The_Greek"
+            android:name=".Jimmy_The_Greek"
             android:label="@string/title_activity_jimmy__the__greek" >
         </activity>
         <activity
-            android:name="Food.KFC"
+            android:name=".KFC"
             android:label="@string/title_activity_kfc" >
         </activity>
         <activity
-            android:name="Food.Manchu_Wok"
+            android:name=".Manchu_Wok"
             android:label="@string/title_activity_manchu__wok" >
         </activity>
         <activity
-            android:name="Food.New_York_Fries"
+            android:name=".New_York_Fries"
             android:label="@string/title_activity_new__york__fries" >
         </activity>
         <activity
-            android:name="Food.Shanghai_360"
+            android:name=".Shanghai_360"
             android:label="@string/title_activity_shanghai_360" >
         </activity>
         <activity
-            android:name="Food.Starbucks"
+            android:name=".Starbucks"
             android:label="@string/title_activity_starbucks" >
         </activity>
         <activity
-            android:name="Food.Su_Shi"
+            android:name=".Su_Shi"
             android:label="@string/title_activity_su__shi" >
         </activity>
         <activity
-            android:name="Food.Sushi_O"
+            android:name=".Sushi_O"
             android:label="@string/title_activity_sushi__o" >
         </activity>
         <activity
-            android:name="Food.Szechuan_Express"
+            android:name=".Szechuan_Express"
             android:label="@string/title_activity_szechuan__express" >
         </activity>
         <activity
-            android:name="Food.Taco_Bell"
+            android:name=".Taco_Bell"
             android:label="@string/title_activity_taco__bell" >
         </activity>
         <activity
-            android:name="Food.Teriyaki_Experience"
+            android:name=".Teriyaki_Experience"
             android:label="@string/title_activity_teriyaki__experience" >
         </activity>
         <activity
-            android:name="Food.Thai_Express"
+            android:name=".Thai_Express"
             android:label="@string/title_activity_thai__express" >
         </activity>
         <activity
-            android:name="Food.Villa_Madina"
+            android:name=".Villa_Madina"
             android:label="@string/title_activity_villa__madina" >
         </activity>
         <activity
-            android:name="Food.Mrs_Vanellis"
+            android:name=".Mrs_Vanellis"
             android:label="@string/title_activity_mrs__vanellis" >
         </activity>
     </application>
