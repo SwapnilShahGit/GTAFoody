@@ -13,7 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
-public class SquareOne extends Activity {
+public class    SquareOne extends Activity {
     String[] list_restaurants = { "A&W", "Amaya Express",
             "Basil Box", "Big Smoke Burger", "Bourbon Street Grill", "Burger King",
             "Charley's Steakery", "Chipotle", "Cinnabon",
@@ -53,13 +53,15 @@ public class SquareOne extends Activity {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        String item = String.valueOf(parent.getItemAtPosition(position));
+                        String NameOfRow = String.valueOf(parent.getItemAtPosition(position));
                         //Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
                         try {
-                            Class item2 = Class.forName(item);
-                            startActivity(new Intent(SquareOne.this, item2));
-                        } catch (ClassNotFoundException e) {
-                            return;
+                            String NameOfClassString = MainActivity.switchActivity(NameOfRow);
+                            Class NameOfClass = Class.forName(NameOfClassString);
+                            startActivity(new Intent(SquareOne.this, NameOfClass));
+                        }
+                        catch (ClassNotFoundException e){
+                            startActivity(new Intent(SquareOne.this, Starbucks.class));
                         }
                     }
                     });

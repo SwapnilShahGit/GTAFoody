@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainActivity extends Activity {
-    String[] list_restaurants = {"Square One", "Mapleview", "Burlington Mall", "Eaton Centre",
+    String[] list_restaurants = {"Square One", "Mapleview Mall", "Burlington Mall", "Eaton Centre",
             "Sherway Gardens", "Yorkdale Mall", "Erin Mills Centre"};
 
     Integer[] imageId = {R.drawable.image, R.drawable.image2, R.drawable.image, R.drawable.image, R.drawable.image, R.drawable.image, R.drawable.image,};
@@ -59,15 +59,25 @@ public class MainActivity extends Activity {
     }
 
 
-    public String switchActivity(String item) {
+    public static String switchActivity(String item) {
 
                 switch (item) {
                     case "Square One":
                         return "com.example.swapnil.squareonemenu.SquareOne";
-                    case "Mapleview":
+                    case "Mapleview Mall":
                         return "com.example.swapnil.squareonemenu.Mapleview";
                     case "Burlington Mall":
                         return "com.example.swapnil.squareonemenu.BurlingtonMall";
+                    case "Eaton Centre":
+                        return "com.example.swapnil.squareonemenu.EatonCentre";
+                    case "Sherway Gardens":
+                        return "com.example.swapnil.squareonemenu.SherwayGardens";
+                    case "Yorkdale Mall":
+                        return "com.example.swapnil.squareonemenu.YorkdaleMall";
+                    case "Erin Mills Centre":
+                        return "com.example.swapnil.squareonemenu.ErinMillsTownCentre";
+                    case "A&W":
+                        return "com.example.swapnil.squareonemenu.AW";
                     }
                 return "KFC";
             }
