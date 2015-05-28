@@ -38,12 +38,25 @@ public class MainActivity extends Activity {
         foodyListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) throws ClassNotFoundException{
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id){
                         String item = String.valueOf(parent.getItemAtPosition(position));
                         //Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
-                        Class item2 = Class.forName(item);
 
-                        startActivity(new Intent(MainActivity.this, item2));
+                        try {
+                            String item2 = switchActivity(item);
+                            Class item3 = Class.forName("com.example.swapnil.squareonemenu.SquareOne");
+                            startActivity(new Intent(MainActivity.this, Starbucks.class));
+                            Class a = (Class)item3.newInstance();
+                            startActivity(new Intent(MainActivity.this, item3));
+                        }
+                        catch (ClassNotFoundException e){
+                            startActivity(new Intent(MainActivity.this, Starbucks.class));
+                        }
+                        catch (InstantiationException e) {
+                            startActivity(new Intent(MainActivity.this, Amaya_Express.class));
+                        } catch (IllegalAccessException e) {
+                            startActivity(new Intent(MainActivity.this, AW.class));
+                        }
 
                     }
 
@@ -51,5 +64,16 @@ public class MainActivity extends Activity {
                 });
     }
 
+
+    public String switchActivity(String item) {
+
+                switch (item) {
+                    case "Square One":
+                        return "com.example.swapnil.squareonemenu.SquareOne";
+                    case "Mapleview":
+                        return "com.example.swapnil.squareonemenu.Mapleview";
+                    }
+                return "KFC";
+            }
 
 }

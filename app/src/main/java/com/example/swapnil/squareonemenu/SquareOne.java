@@ -55,18 +55,15 @@ public class SquareOne extends Activity {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String item = String.valueOf(parent.getItemAtPosition(position));
                         //Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
-                        switch (item) {
-                            case "Amaya Express":
-                                startActivity(new Intent(SquareOne.this, Amaya_Express.class));
-                                break;
-                            case "A&W":
-                                startActivity(new Intent(SquareOne.this, AW.class));
-                                break;
-
+                        try {
+                            Class item2 = Class.forName(item);
+                            startActivity(new Intent(SquareOne.this, item2));
+                        } catch (ClassNotFoundException e) {
+                            return;
                         }
                     }
+                    });
 
-                    ;
-                });
+
+                };
     }
-}
