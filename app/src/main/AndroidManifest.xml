@@ -61,8 +61,8 @@
             android:label="@string/title_activity_cultures" >
         </activity>
         <activity
-            android:name=".Dairy_Queen_Orange_Julius"
-            android:label="@string/title_activity_dairy__queen__orange__julius" >
+            android:name=".Dairy_Queen"
+            android:label="@string/title_activity_dairy__queen" >
         </activity>
         <activity
             android:name=".Jimmy_The_Greek"
