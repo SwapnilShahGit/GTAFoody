@@ -39,24 +39,18 @@ public class MainActivity extends Activity {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-                        String item = String.valueOf(parent.getItemAtPosition(position));
+                        String NameOfRow = String.valueOf(parent.getItemAtPosition(position));
                         //Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
 
                         try {
-                            String item2 = switchActivity(item);
-                            Class item3 = Class.forName("com.example.swapnil.squareonemenu.SquareOne");
-                            startActivity(new Intent(MainActivity.this, Starbucks.class));
-                            Class a = (Class)item3.newInstance();
-                            startActivity(new Intent(MainActivity.this, item3));
+                            String NameOfClassString = switchActivity(NameOfRow);
+                            Class NameOfClass = Class.forName(NameOfClassString);
+                            startActivity(new Intent(MainActivity.this, NameOfClass));
                         }
                         catch (ClassNotFoundException e){
                             startActivity(new Intent(MainActivity.this, Starbucks.class));
                         }
-                        catch (InstantiationException e) {
-                            startActivity(new Intent(MainActivity.this, Amaya_Express.class));
-                        } catch (IllegalAccessException e) {
-                            startActivity(new Intent(MainActivity.this, AW.class));
-                        }
+
 
                     }
 
@@ -72,6 +66,8 @@ public class MainActivity extends Activity {
                         return "com.example.swapnil.squareonemenu.SquareOne";
                     case "Mapleview":
                         return "com.example.swapnil.squareonemenu.Mapleview";
+                    case "Burlington Mall":
+                        return "com.example.swapnil.squareonemenu.BurlingtonMall";
                     }
                 return "KFC";
             }
