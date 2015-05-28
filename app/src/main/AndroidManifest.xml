@@ -148,6 +148,10 @@
             android:name=".YorkdaleMall"
             android:label="@string/title_activity_yorkdale_mall" >
         </activity>
+        <activity
+            android:name=".FreshlySqueezed"
+            android:label="@string/title_activity_freshly_squeezed" >
+        </activity>
     </application>
 
 </manifest>

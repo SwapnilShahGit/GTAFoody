@@ -12,7 +12,8 @@ public class MainActivity extends Activity {
     String[] list_restaurants = {"Square One", "Mapleview Mall", "Burlington Mall", "Eaton Centre",
             "Sherway Gardens", "Yorkdale Mall", "Erin Mills Centre"};
 
-    Integer[] imageId = {R.drawable.image, R.drawable.image2, R.drawable.image, R.drawable.image, R.drawable.image, R.drawable.image, R.drawable.image,};
+    Integer[] imageId = {R.drawable.image, R.drawable.image2, R.drawable.image, R.drawable.image,
+            R.drawable.image, R.drawable.image, R.drawable.image,};
 
 
     ListView foodyListView;
@@ -78,7 +79,57 @@ public class MainActivity extends Activity {
                         return "com.example.swapnil.squareonemenu.ErinMillsTownCentre";
                     case "A&W":
                         return "com.example.swapnil.squareonemenu.AW";
-                    }
+                    case "Amaya Express":
+                        return "com.example.swapnil.squareonemenu.Amaya_Express";
+                    case "Basil Box":
+                        return "com.example.swapnil.squareonemenu.Amaya_Express";
+                    case "Big Smoke Burger":
+                        return "com.example.swapnil.squareonemenu.Big_Smoke_Burger";
+                    case "Bourbon Street Grill":
+                        return "com.example.swapnil.squareonemenu.Bourbon_Street_Grill";
+                    case "Burger King":
+                        return "com.example.swapnil.squareonemenu.burger_king";
+                    case "Charleys Steakery":
+                        return "com.example.swapnil.squareonemenu.Charleys_Steakery";
+                    case "Chipotle":
+                        return "com.example.swapnil.squareonemenu.chipotle";
+                    case "Cinnabon":
+                        return "com.example.swapnil.squareonemenu.cinnabon";
+                    case "Cultures":
+                        return "com.example.swapnil.squareonemenu.cultures";
+                    case "Dairy Queen/Orange Julius":
+                        return "com.example.swapnil.squareonemenu.Dairy_Queen_Orange_Julius";
+                    case "Jimmy The Greek":
+                        return "com.example.swapnil.squareonemenu.Jimmy_The_Greek";
+                    case "KFC":
+                        return "com.example.swapnil.squareonemenu.KFC";
+                    case "Manchu Wok":
+                        return "com.example.swapnil.squareonemenu.Manchu_Wok";
+                    case "Mrs Vanellis":
+                        return "com.example.swapnil.squareonemenu.Mrs_Vanellis";
+                    case "New York Fries":
+                        return "com.example.swapnil.squareonemenu.New_York_Fries";
+                    case "Shanghai 360":
+                        return "com.example.swapnil.squareonemenu.Shanghai_360";
+                    case "Starbucks":
+                        return "com.example.swapnil.squareonemenu.Starbucks";
+                    case "Su Shi":
+                        return "com.example.swapnil.squareonemenu.Su_Shi";
+                    case "Sushi O":
+                        return "com.example.swapnil.squareonemenu.Sushi_O";
+                    case "Szechuan Express":
+                        return "com.example.swapnil.squareonemenu.Szechuan_Express";
+                    case "Taco Bell":
+                        return "com.example.swapnil.squareonemenu.Taco_Bell";
+                    case "Teriyaki Experience":
+                        return "com.example.swapnil.squareonemenu.Teriyaki_Experience";
+                    case "Thai Express":
+                        return "com.example.swapnil.squareonemenu.Thai_Express";
+                    case "Villa Madina":
+                        return "com.example.swapnil.squareonemenu.Villa_Madina";
+                    case "Freshly Squeezed":
+                        return "com.example.swapnil.squareonemenu.FreshlySqueezed";
+                }
                 return "KFC";
             }
 

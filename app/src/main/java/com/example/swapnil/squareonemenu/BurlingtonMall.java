@@ -47,22 +47,20 @@ public class BurlingtonMall extends Activity {
         foodyListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-                    {
-                        String item = String.valueOf(parent.getItemAtPosition(position));
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        String NameOfRow = String.valueOf(parent.getItemAtPosition(position));
                         //Toast.makeText(MainActivity.this, item, Toast.LENGTH_LONG).show();
-                        switch (item) {
-                            case "Amaya Express":
-                                startActivity(new Intent(BurlingtonMall.this, Amaya_Express.class));
-                                break;
-                            case "A&W":
-                                startActivity(new Intent(BurlingtonMall.this, AW.class));
-                                break;
-
+                        try {
+                            String NameOfClassString = MainActivity.switchActivity(NameOfRow);
+                            Class NameOfClass = Class.forName(NameOfClassString);
+                            startActivity(new Intent(BurlingtonMall.this, NameOfClass));
+                        }
+                        catch (ClassNotFoundException e){
+                            startActivity(new Intent(BurlingtonMall.this, Starbucks.class));
                         }
                     }
-
-                    ;
                 });
-    }
+
+
+    };
 }
