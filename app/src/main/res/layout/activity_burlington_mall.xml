@@ -7,7 +7,11 @@
     tools:context="com.example.swapnil.squareonemenu.BurlingtonMall"
     android:background="@color/abc_secondary_text_material_dark">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/burlingtonmallListView"></ListView>
+
 
 </RelativeLayout>

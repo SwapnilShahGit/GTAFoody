@@ -33,7 +33,7 @@ class CustomAdapter extends ArrayAdapter<String> {
         String singleFoodItem = getItem(position);
 
         TextView foodyText = (TextView) customView.findViewById(R.id.foodyText);
-        TextView hourstext = (TextView) customView.findViewById(R.id.hoursText);
+
 
         ImageView foodyImage = (ImageView) customView.findViewById(R.id.foodyImage); //buckysImage is after the .id
 

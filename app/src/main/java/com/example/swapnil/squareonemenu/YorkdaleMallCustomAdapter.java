@@ -3,6 +3,9 @@ package com.example.swapnil.squareonemenu;
 /**
  * Created by oguzhan on 2015-05-29.
  */
+
+
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-class SquareOneCustomAdapter extends ArrayAdapter<String> {
+
+public class YorkdaleMallCustomAdapter extends ArrayAdapter<String>  {
 
     Integer[] imageId = {R.drawable.aw, R.drawable.amaya, R.drawable.image3,
             R.drawable.bigsmokeburger,
@@ -23,27 +27,36 @@ class SquareOneCustomAdapter extends ArrayAdapter<String> {
             R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
             R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
             R.drawable.image3,R.drawable.image3};
-    SquareOneCustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
-        super(context, R.layout.squareonecustomrow, restaurants);
+    YorkdaleMallCustomAdapter(Context context, String[] restaurants, Integer[] images) {
+
+    super(context, R.layout.yorkdalecustomrow, restaurants);
+
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater squareOneInflater = LayoutInflater.from(getContext());
-        View customView = squareOneInflater.inflate(R.layout.squareonecustomrow, parent, false);
+        View customView = squareOneInflater.inflate(R.layout.yorkdalecustomrow, parent, false);
 
         String singleFoodItem = getItem(position);
 
-        TextView squareOneText = (TextView) customView.findViewById(R.id.squareOnePlaceText);
+        TextView foodyText = (TextView) customView.findViewById(R.id.yorkdalePlaceText);
 
 
-        ImageView squareOneImage = (ImageView) customView.findViewById(R.id.squareOnePlaceImage); //buckysImage is after the .id
+        ImageView foodyImage = (ImageView) customView.findViewById(R.id.yorkdalePlaceImage); //buckysImage is after the .id
 
 
-        squareOneText.setText(singleFoodItem);
+        foodyText.setText(singleFoodItem);
 
-        squareOneImage.setImageResource(imageId[position]);
+        foodyImage.setImageResource(imageId[position]);
         return customView;
     }
 }
+
+
+
+
+
+
+

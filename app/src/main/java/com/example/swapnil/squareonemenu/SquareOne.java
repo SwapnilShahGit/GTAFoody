@@ -35,17 +35,17 @@ public class    SquareOne extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_square_one);
 
 
-        squareOneListView = (ListView) findViewById(R.id.foodyListView);
+        squareOneListView = (ListView) findViewById(R.id.squareOneListView);
         // this-The current activity context.
         // Second param is the resource Id for list layout row item
         // Third param is input array
 
         squareOneAdapter = new SquareOneCustomAdapter(this, list_restaurants, imageId);
 
-        squareOneListView = (ListView) findViewById(R.id.foodyListView);
+        squareOneListView = (ListView) findViewById(R.id.squareOneListView);
 
         squareOneListView.setAdapter(squareOneAdapter);
 

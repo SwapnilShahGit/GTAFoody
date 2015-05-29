@@ -3,6 +3,7 @@ package com.example.swapnil.squareonemenu;
 /**
  * Created by oguzhan on 2015-05-29.
  */
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-class SquareOneCustomAdapter extends ArrayAdapter<String> {
+
+public class BurlingtonMallCustomAdapter extends ArrayAdapter<String>{
 
     Integer[] imageId = {R.drawable.aw, R.drawable.amaya, R.drawable.image3,
             R.drawable.bigsmokeburger,
@@ -23,27 +25,28 @@ class SquareOneCustomAdapter extends ArrayAdapter<String> {
             R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
             R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
             R.drawable.image3,R.drawable.image3};
-    SquareOneCustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
-        super(context, R.layout.squareonecustomrow, restaurants);
+    BurlingtonMallCustomAdapter(Context context, String[] restaurants, Integer[] images) {
+
+        super(context, R.layout.burlingtonmallcustomrow, restaurants);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater squareOneInflater = LayoutInflater.from(getContext());
-        View customView = squareOneInflater.inflate(R.layout.squareonecustomrow, parent, false);
+        View customView = squareOneInflater.inflate(R.layout.burlingtonmallcustomrow, parent, false);
 
         String singleFoodItem = getItem(position);
 
-        TextView squareOneText = (TextView) customView.findViewById(R.id.squareOnePlaceText);
+        TextView burlingtonmallText = (TextView) customView.findViewById(R.id.burlingtonmallPlaceText);
 
 
-        ImageView squareOneImage = (ImageView) customView.findViewById(R.id.squareOnePlaceImage); //buckysImage is after the .id
+        ImageView burlingtonmallImage = (ImageView) customView.findViewById(R.id.burlingtonmallPlaceImage); //buckysImage is after the .id
 
 
-        squareOneText.setText(singleFoodItem);
+        burlingtonmallText.setText(singleFoodItem);
 
-        squareOneImage.setImageResource(imageId[position]);
+        burlingtonmallImage.setImageResource(imageId[position]);
         return customView;
     }
 }

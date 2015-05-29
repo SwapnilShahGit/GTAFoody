@@ -23,12 +23,4 @@
         android:fontFamily="Times New Roman"
         android:textColor="#c00000" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Slide to right for hours"
-        android:id="@+id/hoursText"
-        android:layout_margin="5dp"/>
-
 </LinearLayout>

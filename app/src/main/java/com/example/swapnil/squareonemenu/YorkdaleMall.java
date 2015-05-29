@@ -47,27 +47,25 @@ public class YorkdaleMall extends Activity {
     };
 
 
-    ListView foodyListView;
-    ArrayAdapter foodyAdapter;
+    ListView yorkdaleListView;
+    ArrayAdapter yorkdaleAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_yorkdale_mall);
 
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        yorkdaleListView = (ListView) findViewById(R.id.yorkdaleListView);
         // this-The current activity context.
         // Second param is the resource Id for list layout row item
         // Third param is input array
 
-        foodyAdapter = new CustomAdapter(this, list_restaurants, imageId);
+        yorkdaleAdapter = new SquareOneCustomAdapter(this, list_restaurants, imageId);
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        yorkdaleListView.setAdapter(yorkdaleAdapter);
 
-        foodyListView.setAdapter(foodyAdapter);
-
-        foodyListView.setOnItemClickListener(
+        yorkdaleListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

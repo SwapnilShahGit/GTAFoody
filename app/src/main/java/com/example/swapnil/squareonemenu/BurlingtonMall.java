@@ -24,27 +24,27 @@ public class BurlingtonMall extends Activity {
             R.drawable.image2,};
 
 
-    ListView foodyListView;
-    ArrayAdapter foodyAdapter;
+    ListView burlingtonmallListView;
+    ArrayAdapter burlingtonmallAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_square_one);
 
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        burlingtonmallListView = (ListView) findViewById(R.id.burlingtonmallListView);
         // this-The current activity context.
         // Second param is the resource Id for list layout row item
         // Third param is input array
 
-        foodyAdapter = new CustomAdapter(this, list_restaurants, imageId);
+        burlingtonmallAdapter = new SquareOneCustomAdapter(this, list_restaurants, imageId);
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        burlingtonmallListView = (ListView) findViewById(R.id.squareOneListView);
 
-        foodyListView.setAdapter(foodyAdapter);
+        burlingtonmallListView.setAdapter(burlingtonmallAdapter);
 
-        foodyListView.setOnItemClickListener(
+        burlingtonmallListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
