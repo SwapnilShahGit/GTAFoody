@@ -13,8 +13,8 @@ import android.widget.TextView;
 
 class SquareOneCustomAdapter extends ArrayAdapter<String> {
 
-    Integer[] imageId = {R.drawable.image3, R.drawable.image3, R.drawable.image3,
-            R.drawable.image3,
+    Integer[] imageId = {R.drawable.aw, R.drawable.amaya, R.drawable.image3,
+            R.drawable.bigsmokeburger,
             R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3, R.drawable.image3,
             R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,
             R.drawable.image3, R.drawable.image3, R.drawable.image3,R.drawable.image3,R.drawable.image3,
