@@ -30,27 +30,27 @@ public class EatonCentre extends Activity {
             R.drawable.image, R.drawable.image2,};
 
 
-    ListView foodyListView;
-    ArrayAdapter foodyAdapter;
+    ListView eatoncentreListView;
+    ArrayAdapter eatoncentreAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_square_one);
 
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        eatoncentreListView = (ListView) findViewById(R.id.eatoncentreListView);
         // this-The current activity context.
         // Second param is the resource Id for list layout row item
         // Third param is input array
 
-        foodyAdapter = new CustomAdapter(this, list_restaurants, imageId);
+        eatoncentreAdapter = new SquareOneCustomAdapter(this, list_restaurants, imageId);
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        eatoncentreListView = (ListView) findViewById(R.id.squareOneListView);
 
-        foodyListView.setAdapter(foodyAdapter);
+        eatoncentreListView.setAdapter(eatoncentreAdapter);
 
-        foodyListView.setOnItemClickListener(
+        eatoncentreListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

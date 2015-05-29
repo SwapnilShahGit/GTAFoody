@@ -29,27 +29,27 @@ public class Mapleview extends Activity {
             R.drawable.image,R.drawable.image};
 
 
-    ListView foodyListView;
-    ArrayAdapter foodyAdapter;
+    ListView mapleviewListView;
+    ArrayAdapter mapleviewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_mapleview);
 
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        mapleviewListView = (ListView) findViewById(R.id.mapleviewListView);
         // this-The current activity context.
         // Second param is the resource Id for list layout row item
         // Third param is input array
 
-        foodyAdapter = new CustomAdapter(this, list_restaurants, imageId);
+        mapleviewAdapter = new SquareOneCustomAdapter(this, list_restaurants, imageId);
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        mapleviewListView = (ListView) findViewById(R.id.mapleviewListView);
 
-        foodyListView.setAdapter(foodyAdapter);
+        mapleviewListView.setAdapter(mapleviewAdapter);
 
-        foodyListView.setOnItemClickListener(
+        mapleviewListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

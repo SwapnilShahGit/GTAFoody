@@ -21,6 +21,6 @@
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:fontFamily="Times New Roman"
-        android:textColor="#c00000" />
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

@@ -25,28 +25,27 @@ public class ErinMillsTownCentre extends Activity {
             R.drawable.image2,R.drawable.image, R.drawable.image2,R.drawable.image,
             R.drawable.image2,R.drawable.image, R.drawable.image};
 
-
-    ListView foodyListView;
-    ArrayAdapter foodyAdapter;
+    ListView erinmillstowncentreListView;
+    ArrayAdapter erinmillstowncentreAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_erin_mills_town_centre);
 
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        erinmillstowncentreListView = (ListView) findViewById(R.id.erinmillstowncentreListView);
         // this-The current activity context.
         // Second param is the resource Id for list layout row item
         // Third param is input array
 
-        foodyAdapter = new CustomAdapter(this, list_restaurants, imageId);
+        erinmillstowncentreAdapter = new SquareOneCustomAdapter(this, list_restaurants, imageId);
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        erinmillstowncentreListView = (ListView) findViewById(R.id.squareOneListView);
 
-        foodyListView.setAdapter(foodyAdapter);
+        erinmillstowncentreListView.setAdapter(erinmillstowncentreAdapter);
 
-        foodyListView.setOnItemClickListener(
+        erinmillstowncentreListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
