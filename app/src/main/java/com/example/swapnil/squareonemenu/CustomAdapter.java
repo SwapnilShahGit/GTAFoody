@@ -1,6 +1,7 @@
 package com.example.swapnil.squareonemenu;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,9 @@ class CustomAdapter extends ArrayAdapter<String> {
     CustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
         super(context, R.layout.custom_row, restaurants);
+
+
+
     }
 
     @Override
@@ -39,6 +43,8 @@ class CustomAdapter extends ArrayAdapter<String> {
 
 
         foodyText.setText(singleFoodItem);
+
+
 
         foodyImage.setImageResource(imageId[position]);
         return customView;

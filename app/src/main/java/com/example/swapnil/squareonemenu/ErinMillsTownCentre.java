@@ -41,7 +41,7 @@ public class ErinMillsTownCentre extends Activity {
 
         erinmillstowncentreAdapter = new SquareOneCustomAdapter(this, list_restaurants, imageId);
 
-        erinmillstowncentreListView = (ListView) findViewById(R.id.squareOneListView);
+        erinmillstowncentreListView = (ListView) findViewById(R.id.erinmillstowncentreListView);
 
         erinmillstowncentreListView.setAdapter(erinmillstowncentreAdapter);
 

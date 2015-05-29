@@ -28,29 +28,27 @@ public class SherwayGardens extends Activity {
             R.drawable.image, R.drawable.image2,
             R.drawable.image, R.drawable.image2,
             R.drawable.image, R.drawable.image2,};
-
-
-    ListView foodyListView;
-    ArrayAdapter foodyAdapter;
+    ListView sherwaygardensListView;
+    ArrayAdapter sherwargaydensAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sherway_gardens);
 
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        sherwaygardensListView = (ListView) findViewById(R.id.sherwaygardensListView);
         // this-The current activity context.
         // Second param is the resource Id for list layout row item
         // Third param is input array
 
-        foodyAdapter = new CustomAdapter(this, list_restaurants, imageId);
+        sherwargaydensAdapter = new SquareOneCustomAdapter(this, list_restaurants, imageId);
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        sherwaygardensListView = (ListView) findViewById(R.id.sherwaygardensListView);
 
-        foodyListView.setAdapter(foodyAdapter);
+        sherwaygardensListView.setAdapter(sherwargaydensAdapter);
 
-        foodyListView.setOnItemClickListener(
+        sherwaygardensListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

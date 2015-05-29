@@ -17,7 +17,7 @@ public class    SquareOne extends Activity {
     String[] list_restaurants = { "A&W", "Amaya Express",
             "Basil Box", "Big Smoke Burger", "Bourbon Street Grill", "Burger King",
             "Charley's Steakery", "Chipotle", "Cinnabon",
-            "Cultures", "Dairy Queen/Orange Julius", "Jimmy The Greek", "KFC", "Manchu Wok",
+            "Cultures", "Dairy Queen", "Orange Julius", "Jimmy The Greek", "KFC", "Manchu Wok",
             "Mrs.Vanelli's", "New York Fries", "Shanghai 360", "Starbucks", "Su & Shi", "Sushi-Q",
             "Szechuan Express", "Taco Bell", "Teriyaki Experience", "Thai Express", "Villa Madina"};
 

@@ -4,20 +4,20 @@
     android:layout_height="match_parent">
 
 
+
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:id="@+id/foodyImage"
+        android:id="@+id/sherwaygardensPlaceImage"
         android:src="@drawable/image"
         android:layout_margin="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
-        android:id="@+id/foodyText"
+        android:id="@+id/sherwaygardensPlaceText"
         android:layout_margin="5dp"
         android:focusable="false"
         android:focusableInTouchMode="false"
