@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 class CustomAdapter extends ArrayAdapter<String> {
 
-    Integer[] imageId = {R.drawable.aw, R.drawable.amaya, R.drawable.bigsmokeburger,
-            R.drawable.boosterjuice,
-            R.drawable.chipotle,R.drawable.image,R.drawable.image,R.drawable.image, R.drawable.image2,
+    Integer[] imageId = {R.drawable.image, R.drawable.image, R.drawable.image,
+            R.drawable.image,
+            R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image, R.drawable.image2,
             R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,
             R.drawable.image, R.drawable.image2, R.drawable.image,R.drawable.image,R.drawable.image,
             R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,
@@ -33,6 +33,7 @@ class CustomAdapter extends ArrayAdapter<String> {
         String singleFoodItem = getItem(position);
 
         TextView foodyText = (TextView) customView.findViewById(R.id.foodyText);
+        TextView hourstext = (TextView) customView.findViewById(R.id.hoursText);
 
         ImageView foodyImage = (ImageView) customView.findViewById(R.id.foodyImage); //buckysImage is after the .id
 

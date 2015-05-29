@@ -17,5 +17,18 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/foodyText"
-        android:layout_margin="5dp" />
+        android:layout_margin="5dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:fontFamily="Times New Roman"
+        android:textColor="#c00000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Slide to right for hours"
+        android:id="@+id/hoursText"
+        android:layout_margin="5dp"/>
+
 </LinearLayout>

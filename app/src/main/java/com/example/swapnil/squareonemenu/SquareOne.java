@@ -29,8 +29,8 @@ public class    SquareOne extends Activity {
             R.drawable.image,R.drawable.image};
 
 
-    ListView foodyListView;
-    ArrayAdapter foodyAdapter;
+    ListView squareOneListView;
+    ArrayAdapter squareOneAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,18 +38,18 @@ public class    SquareOne extends Activity {
         setContentView(R.layout.activity_main);
 
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        squareOneListView = (ListView) findViewById(R.id.foodyListView);
         // this-The current activity context.
         // Second param is the resource Id for list layout row item
         // Third param is input array
 
-        foodyAdapter = new CustomAdapter(this, list_restaurants, imageId);
+        squareOneAdapter = new SquareOneCustomAdapter(this, list_restaurants, imageId);
 
-        foodyListView = (ListView) findViewById(R.id.foodyListView);
+        squareOneListView = (ListView) findViewById(R.id.foodyListView);
 
-        foodyListView.setAdapter(foodyAdapter);
+        squareOneListView.setAdapter(squareOneAdapter);
 
-        foodyListView.setOnItemClickListener(
+        squareOneListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
