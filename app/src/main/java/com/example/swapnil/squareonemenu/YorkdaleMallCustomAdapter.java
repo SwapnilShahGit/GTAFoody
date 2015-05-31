@@ -7,6 +7,7 @@ package com.example.swapnil.squareonemenu;
 
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,9 +29,11 @@ public class YorkdaleMallCustomAdapter extends ArrayAdapter<String>  {
             R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
             R.drawable.image3,R.drawable.image3};
 
+    Typeface font;
     YorkdaleMallCustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
     super(context, R.layout.yorkdalecustomrow, restaurants);
+    font= Typeface.createFromAsset(context.getAssets(), "Amita-Bold.ttf");
 
     }
 
@@ -41,15 +44,16 @@ public class YorkdaleMallCustomAdapter extends ArrayAdapter<String>  {
 
         String singleFoodItem = getItem(position);
 
-        TextView foodyText = (TextView) customView.findViewById(R.id.yorkdalePlaceText);
+        TextView yorkdalemallText = (TextView) customView.findViewById(R.id.yorkdalePlaceText);
 
 
-        ImageView foodyImage = (ImageView) customView.findViewById(R.id.yorkdalePlaceImage); //buckysImage is after the .id
+        ImageView yorkdalemallImage = (ImageView) customView.findViewById(R.id.yorkdalePlaceImage); //buckysImage is after the .id
 
 
-        foodyText.setText(singleFoodItem);
+        yorkdalemallText.setText(singleFoodItem);
+        yorkdalemallText.setTypeface(font);
 
-        foodyImage.setImageResource(imageId[position]);
+        yorkdalemallImage.setImageResource(imageId[position]);
         return customView;
     }
 }

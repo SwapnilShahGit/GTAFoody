@@ -4,6 +4,7 @@ package com.example.swapnil.squareonemenu;
  * Created by oguzhan on 2015-05-29.
  */
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,9 +24,12 @@ class SquareOneCustomAdapter extends ArrayAdapter<String> {
             R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
             R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
             R.drawable.image3,R.drawable.image3};
+
+    Typeface font;
     SquareOneCustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
         super(context, R.layout.squareonecustomrow, restaurants);
+        font= Typeface.createFromAsset(context.getAssets(), "Amita-Bold.ttf");
     }
 
     @Override
@@ -42,6 +46,7 @@ class SquareOneCustomAdapter extends ArrayAdapter<String> {
 
 
         squareOneText.setText(singleFoodItem);
+        squareOneText.setTypeface(font);
 
         squareOneImage.setImageResource(imageId[position]);
         return customView;

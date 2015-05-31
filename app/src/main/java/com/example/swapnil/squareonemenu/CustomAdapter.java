@@ -21,9 +21,12 @@ class CustomAdapter extends ArrayAdapter<String> {
             R.drawable.image,R.drawable.image, R.drawable.image,R.drawable.image,
             R.drawable.image,R.drawable.image, R.drawable.image,R.drawable.image,
             R.drawable.image,R.drawable.image};
+
+    Typeface font;
     CustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
         super(context, R.layout.custom_row, restaurants);
+        font= Typeface.createFromAsset(context.getAssets(), "Amita-Bold.ttf");
 
 
 
@@ -43,6 +46,8 @@ class CustomAdapter extends ArrayAdapter<String> {
 
 
         foodyText.setText(singleFoodItem);
+        foodyText.setTypeface(font);
+
 
 
 

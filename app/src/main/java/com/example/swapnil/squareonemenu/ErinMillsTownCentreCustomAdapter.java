@@ -5,6 +5,7 @@ package com.example.swapnil.squareonemenu;
  */
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,9 +27,11 @@ public class ErinMillsTownCentreCustomAdapter extends ArrayAdapter<String>{
             R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
             R.drawable.image3,R.drawable.image3};
 
+    Typeface font;
     ErinMillsTownCentreCustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
         super(context, R.layout.erinmillstowncentrecustomrow, restaurants);
+        font= Typeface.createFromAsset(context.getAssets(), "Amita-Bold.ttf");
     }
 
     @Override
@@ -45,6 +48,7 @@ public class ErinMillsTownCentreCustomAdapter extends ArrayAdapter<String>{
 
 
         erinmillstowncentreText.setText(singleFoodItem);
+        erinmillstowncentreText.setTypeface(font);
 
         erinmillstowncentreImage.setImageResource(imageId[position]);
         return customView;

@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
 
 
 
+
         foodyListView = (ListView) findViewById(R.id.foodyListView);
         // this-The current activity context.
         // Second param is the resource Id for list layout row item

@@ -5,6 +5,7 @@ package com.example.swapnil.squareonemenu;
  */
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,9 +27,11 @@ public class SherwayGardensCustomAdapter extends ArrayAdapter<String>{
             R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
             R.drawable.image3,R.drawable.image3};
 
+    Typeface font;
     SherwayGardensCustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
         super(context, R.layout.sherwaygardenscustomrow, restaurants);
+        font= Typeface.createFromAsset(context.getAssets(), "Amita-Bold.ttf");
     }
 
     @Override
@@ -45,6 +48,7 @@ public class SherwayGardensCustomAdapter extends ArrayAdapter<String>{
 
 
         sherwaygardensText.setText(singleFoodItem);
+        sherwaygardensText.setTypeface(font);
 
         sherwaygardensImage.setImageResource(imageId[position]);
         return customView;
