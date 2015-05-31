@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 import com.example.swapnil.squareonemenu.R;
 
@@ -14,6 +15,12 @@ public class Amaya_Express extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_amaya_express);
+
+        String amayaURL = "http://www.amayarestaurant.com/amayaex/index.php?pg=takeout";
+        WebView amayaview = (WebView) this.findViewById(R.id.amayawebView);
+        amayaview.getSettings().setJavaScriptEnabled(true);
+        amayaview.loadUrl(amayaURL);
+
     }
 
     @Override
