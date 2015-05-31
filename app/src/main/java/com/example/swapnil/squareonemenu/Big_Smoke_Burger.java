@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 import com.example.swapnil.squareonemenu.R;
 
@@ -14,8 +15,14 @@ public class Big_Smoke_Burger extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_big__smoke__burge);
-    }
 
+        String bigsmokeburgerURL = "http://www.bigsmokeburger.com/menu/";
+        WebView bigsmokeburgerview = (WebView) this.findViewById(R.id.bigsmokeburgerwebView);
+        bigsmokeburgerview.getSettings().setJavaScriptEnabled(true);
+        bigsmokeburgerview.loadUrl(bigsmokeburgerURL);
+
+
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

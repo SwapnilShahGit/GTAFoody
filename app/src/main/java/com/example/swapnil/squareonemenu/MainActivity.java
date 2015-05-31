@@ -88,58 +88,83 @@ public class MainActivity extends Activity {
                     case "Erin Mills Centre":
                         return "com.example.swapnil.squareonemenu.ErinMillsTownCentre";
                     case "A&W":
-                        URLVariable = "http://www.reddit.com/r/funny/comments/37y55q/when_you_try_and_make_a_serious_vlog_about_diy/";
+                        URLVariable = "http://www.aw.ca/mobile.nsf/menu";
                         return "com.example.swapnil.squareonemenu.Amaya_Express";
                     case "Amaya Express":
                         URLVariable = "http://www.amayarestaurant.com/amayaex/index.php?pg=takeout";
                         return "com.example.swapnil.squareonemenu.Amaya_Express";
                     case "Basil Box":
+                        URLVariable = "";
                         return "com.example.swapnil.squareonemenu.Amaya_Express";
+
                     case "Big Smoke Burger":
+                        URLVariable = "http://www.bigsmokeburger.com/menu/";
                         return "com.example.swapnil.squareonemenu.Big_Smoke_Burger";
                     case "Bourbon Street Grill":
+                        URLVariable = "http://www.bourbonstreetgrille.com/menu.htm";
                         return "com.example.swapnil.squareonemenu.Bourbon_Street_Grill";
                     case "Burger King":
+                        URLVariable = "http://www.bk.com/menu";
                         return "com.example.swapnil.squareonemenu.burger_king";
                     case "Charleys Steakery":
+                        URLVariable = "http://charleys.com/food/";
                         return "com.example.swapnil.squareonemenu.Charleys_Steakery";
                     case "Chipotle":
+                        URLVariable = "http://chipotle.com/menu";
                         return "com.example.swapnil.squareonemenu.chipotle";
                     case "Cinnabon":
+                        URLVariable = "http://www.cinnabon.com/bakery-treats";
                         return "com.example.swapnil.squareonemenu.cinnabon";
                     case "Cultures":
+                        URLVariable = "http://www.cultures-restaurants.com/en/menu.php";
                         return "com.example.swapnil.squareonemenu.cultures";
                     case "Dairy Queen":
+                        URLVariable = "http://www.dairyqueen.com/us-en/Menu/Full-Menu/?localechange=1&";
                         return "com.example.swapnil.squareonemenu.Dairy_Queen";
                     case "Jimmy The Greek":
+                        URLVariable = "http://www.jimmythegreek.com/";
                         return "com.example.swapnil.squareonemenu.Jimmy_The_Greek";
                     case "KFC":
+                        URLVariable = "http://www.kfc.ca/menu/index.aspx?gclid=Cj0KEQjw4qqrBRDE2K_z7Pbvjo8BEiQA39AImdM9HaLAaStv6y0OjumV1r8AAdHYtA83Uzoo-nOtKd0aAgun8P8HAQ";
                         return "com.example.swapnil.squareonemenu.KFC";
                     case "Manchu Wok":
+                        URLVariable = "http://www.manchuwok.com/menu/";
                         return "com.example.swapnil.squareonemenu.Manchu_Wok";
                     case "Mrs Vanellis":
+                        URLVariable = "http://www.vanellisrestaurants.com/en/menu";
                         return "com.example.swapnil.squareonemenu.Mrs_Vanellis";
                     case "New York Fries":
+                        URLVariable = "http://www.newyorkfries.com/menu";
                         return "com.example.swapnil.squareonemenu.New_York_Fries";
                     case "Shanghai 360":
+                        //No menuURLVariable = "";
                         return "com.example.swapnil.squareonemenu.Shanghai_360";
                     case "Starbucks":
+                        URLVariable = "http://www.starbucks.ca/?gclid=Cj0KEQjw4qqrBRDE2K_z7Pbvjo8BEiQA39AImam-yh_ZY9qAoSJiARTwkxW7qweFflAH7U0bSHnqI14aAj1g8P8HAQ";
                         return "com.example.swapnil.squareonemenu.Starbucks";
                     case "Su Shi":
+                        URLVariable = "http://www.starbucks.ca/?gclid=Cj0KEQjw4qqrBRDE2K_z7Pbvjo8BEiQA39AImam-yh_ZY9qAoSJiARTwkxW7qweFflAH7U0bSHnqI14aAj1g8P8HAQ";
                         return "com.example.swapnil.squareonemenu.Su_Shi";
                     case "Sushi O":
+                        //No websiteURLVariable = "";
                         return "com.example.swapnil.squareonemenu.Sushi_O";
                     case "Szechuan Express":
+                        URLVariable = "";
                         return "com.example.swapnil.squareonemenu.Szechuan_Express";
                     case "Taco Bell":
+                        URLVariable = "https://www.tacobell.com/m/menu";
                         return "com.example.swapnil.squareonemenu.Taco_Bell";
                     case "Teriyaki Experience":
+                        URLVariable = "http://www.teriyakiexperience.com/en/Our-Food.html";
                         return "com.example.swapnil.squareonemenu.Teriyaki_Experience";
                     case "Thai Express":
+                        URLVariable = "http://www.thaiexpress.ca/menu/";
                         return "com.example.swapnil.squareonemenu.Thai_Express";
                     case "Villa Madina":
+                        URLVariable = "http://www.villamadina.com/en/menu";
                         return "com.example.swapnil.squareonemenu.Villa_Madina";
                     case "Freshly Squeezed":
+                        URLVariable = "http://www.freshlysqueezed.ca/index.php?r=web/products";
                         return "com.example.swapnil.squareonemenu.FreshlySqueezed";
                 }
                 return "Not matching string";
