@@ -32,7 +32,7 @@ public class BurlingtonMallCustomAdapter extends ArrayAdapter<String>{
     BurlingtonMallCustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
         super(context, R.layout.burlingtonmallcustomrow, restaurants);
-        font= Typeface.createFromAsset(context.getAssets(), "Amita-Bold.ttf");
+        font= Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf");
     }
 
     @Override

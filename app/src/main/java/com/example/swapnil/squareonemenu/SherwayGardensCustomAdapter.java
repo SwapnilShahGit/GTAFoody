@@ -31,7 +31,7 @@ public class SherwayGardensCustomAdapter extends ArrayAdapter<String>{
     SherwayGardensCustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
         super(context, R.layout.sherwaygardenscustomrow, restaurants);
-        font= Typeface.createFromAsset(context.getAssets(), "Amita-Bold.ttf");
+        font= Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf");
     }
 
     @Override

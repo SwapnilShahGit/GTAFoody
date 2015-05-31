@@ -31,7 +31,7 @@ public class MapleviewCustomAdapter extends ArrayAdapter<String>{
     MapleviewCustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
         super(context, R.layout.mapleviewcustomrow, restaurants);
-        font= Typeface.createFromAsset(context.getAssets(), "Amita-Bold.ttf");
+        font= Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf");
     }
 
     @Override

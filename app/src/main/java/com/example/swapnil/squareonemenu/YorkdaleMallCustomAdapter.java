@@ -33,7 +33,7 @@ public class YorkdaleMallCustomAdapter extends ArrayAdapter<String>  {
     YorkdaleMallCustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
     super(context, R.layout.yorkdalecustomrow, restaurants);
-    font= Typeface.createFromAsset(context.getAssets(), "Amita-Bold.ttf");
+    font= Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf");
 
     }
 

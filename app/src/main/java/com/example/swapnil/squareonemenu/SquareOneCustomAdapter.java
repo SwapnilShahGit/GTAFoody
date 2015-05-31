@@ -29,7 +29,7 @@ class SquareOneCustomAdapter extends ArrayAdapter<String> {
     SquareOneCustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
         super(context, R.layout.squareonecustomrow, restaurants);
-        font= Typeface.createFromAsset(context.getAssets(), "Amita-Bold.ttf");
+        font= Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf");
     }
 
     @Override

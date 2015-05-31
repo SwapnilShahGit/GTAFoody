@@ -26,7 +26,7 @@ class CustomAdapter extends ArrayAdapter<String> {
     CustomAdapter(Context context, String[] restaurants, Integer[] images) {
 
         super(context, R.layout.custom_row, restaurants);
-        font= Typeface.createFromAsset(context.getAssets(), "Amita-Bold.ttf");
+        font= Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf");
 
 
 
