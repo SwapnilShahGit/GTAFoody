@@ -93,16 +93,16 @@ public class MainActivity extends Activity {
                         return "com.example.swapnil.squareonemenu.ErinMillsTownCentre";
                     case "A&W":
                         URLVariable = "http://www.aw.ca/mobile.nsf/menu";
-                        return "com.example.swapnil.squareonemenu.Amaya_Express";
+                        return "com.example.swapnil.squareonemenu.RestaurantActivity";
                     case "Amaya Express":
                         URLVariable = "http://www.amayarestaurant.com/amayaex/index.php?pg=takeout";
-                        return "com.example.swapnil.squareonemenu.Amaya_Express";
+                        return "com.example.swapnil.squareonemenu.RestaurantActivity";
                     case "Basil Box":
                         URLVariable = "";
-                        return "com.example.swapnil.squareonemenu.Amaya_Express";
+                        return "com.example.swapnil.squareonemenu.RestaurantActivity";
                     case "Big Smoke Burger":
                         URLVariable = "http://www.bigsmokeburger.com/menu/";
-                        return "com.example.swapnil.squareonemenu.Big_Smoke_Burger";
+                        return "com.example.swapnil.squareonemenu.RestaurantActivity";
                     case "Bourbon Street Grill":
                         URLVariable = "http://www.bourbonstreetgrille.com/menu.htm";
                         return "com.example.swapnil.squareonemenu.Bourbon_Street_Grill";
