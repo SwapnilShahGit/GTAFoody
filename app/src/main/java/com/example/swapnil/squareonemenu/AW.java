@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 import com.example.swapnil.squareonemenu.R;
 
@@ -14,6 +15,11 @@ public class AW extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aw);
+
+        String awURL = "http://www.aw.ca/mobile.nsf/menu";
+        WebView awview = (WebView) this.findViewById(R.id.awwebView);
+        awview.getSettings().setJavaScriptEnabled(true);
+        awview.loadUrl(awURL);
     }
 
     @Override

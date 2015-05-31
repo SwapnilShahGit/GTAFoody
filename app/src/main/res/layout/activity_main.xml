@@ -9,9 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/foodyListView"
-        android:shadowColor="#00ccff"
-        android:shadowRadius="1.5"
-        android:shadowDx="1"
-        android:shadowDy="1"></ListView>
+        ></ListView>
 
 </RelativeLayout>
