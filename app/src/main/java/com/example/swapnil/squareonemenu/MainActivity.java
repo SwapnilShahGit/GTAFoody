@@ -88,8 +88,8 @@ public class MainActivity extends Activity {
                     case "Erin Mills Centre":
                         return "com.example.swapnil.squareonemenu.ErinMillsTownCentre";
                     case "A&W":
-                        URLVariable = "http://www.aw.ca/mobile.nsf/menu";
-                        return "com.example.swapnil.squareonemenu.AW";
+                        URLVariable = "http://www.reddit.com/r/funny/comments/37y55q/when_you_try_and_make_a_serious_vlog_about_diy/";
+                        return "com.example.swapnil.squareonemenu.Amaya_Express";
                     case "Amaya Express":
                         URLVariable = "http://www.amayarestaurant.com/amayaex/index.php?pg=takeout";
                         return "com.example.swapnil.squareonemenu.Amaya_Express";
