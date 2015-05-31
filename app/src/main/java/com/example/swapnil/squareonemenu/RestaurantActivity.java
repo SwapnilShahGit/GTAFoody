@@ -9,7 +9,7 @@ import android.webkit.WebView;
 import com.example.swapnil.squareonemenu.R;
 
 
-public class Amaya_Express extends ActionBarActivity {
+public class RestaurantActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
