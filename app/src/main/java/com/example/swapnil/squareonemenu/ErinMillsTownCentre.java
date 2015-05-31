@@ -5,12 +5,18 @@ package com.example.swapnil.squareonemenu;
  */
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 
 public class ErinMillsTownCentre extends Activity {
@@ -39,7 +45,7 @@ public class ErinMillsTownCentre extends Activity {
         // Second param is the resource Id for list layout row item
         // Third param is input array
 
-        erinmillstowncentreAdapter = new SquareOneCustomAdapter(this, list_restaurants, imageId);
+        erinmillstowncentreAdapter = new SquareOne.SquareOneCustomAdapter(this, list_restaurants, imageId);
 
         erinmillstowncentreListView = (ListView) findViewById(R.id.erinmillstowncentreListView);
 
@@ -57,11 +63,52 @@ public class ErinMillsTownCentre extends Activity {
                             startActivity(new Intent(ErinMillsTownCentre.this, NameOfClass));
                         }
                         catch (ClassNotFoundException e){
-                            startActivity(new Intent(ErinMillsTownCentre.this, Starbucks.class));
+                            startActivity(new Intent(ErinMillsTownCentre.this, MainActivity.class));
                         }
                     }
                 });
 
 
     };
+
+    public static class ErinMillsTownCentreCustomAdapter extends ArrayAdapter<String>{
+
+        Integer[] imageId = {R.drawable.aw, R.drawable.amaya, R.drawable.image3,
+                R.drawable.bigsmokeburger,
+                R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3, R.drawable.image3,
+                R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,
+                R.drawable.image3, R.drawable.image3, R.drawable.image3,R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3};
+
+        Typeface font;
+        ErinMillsTownCentreCustomAdapter(Context context, String[] restaurants, Integer[] images) {
+
+            super(context, R.layout.erinmillstowncentrecustomrow, restaurants);
+            font= Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf");
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            LayoutInflater squareOneInflater = LayoutInflater.from(getContext());
+            View customView = squareOneInflater.inflate(R.layout.erinmillstowncentrecustomrow, parent, false);
+
+            String singleFoodItem = getItem(position);
+
+            TextView erinmillstowncentreText = (TextView) customView.findViewById(R.id.erinmillstowncentrePlaceText);
+
+
+            ImageView erinmillstowncentreImage = (ImageView) customView.findViewById(R.id.erinmillstowncentrePlaceImage); //buckysImage is after the .id
+
+
+            erinmillstowncentreText.setText(singleFoodItem);
+            erinmillstowncentreText.setTypeface(font);
+
+            erinmillstowncentreImage.setImageResource(imageId[position]);
+            return customView;
+        }
+    }
 }

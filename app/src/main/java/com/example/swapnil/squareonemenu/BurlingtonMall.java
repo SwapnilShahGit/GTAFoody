@@ -5,12 +5,18 @@ package com.example.swapnil.squareonemenu;
  */
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 
 public class BurlingtonMall extends Activity {
@@ -38,7 +44,7 @@ public class BurlingtonMall extends Activity {
         // Second param is the resource Id for list layout row item
         // Third param is input array
 
-        burlingtonmallAdapter = new SquareOneCustomAdapter(this, list_restaurants, imageId);
+        burlingtonmallAdapter = new SquareOne.SquareOneCustomAdapter(this, list_restaurants, imageId);
 
         burlingtonmallListView = (ListView) findViewById(R.id.squareOneListView);
 
@@ -56,11 +62,53 @@ public class BurlingtonMall extends Activity {
                             startActivity(new Intent(BurlingtonMall.this, NameOfClass));
                         }
                         catch (ClassNotFoundException e){
-                            startActivity(new Intent(BurlingtonMall.this, Starbucks.class));
+                            startActivity(new Intent(BurlingtonMall.this, MainActivity.class));
                         }
                     }
                 });
 
 
     };
+
+    public static class BurlingtonMallCustomAdapter extends ArrayAdapter<String>{
+
+        Integer[] imageId = {R.drawable.aw, R.drawable.amaya, R.drawable.image3,
+                R.drawable.bigsmokeburger,
+                R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3, R.drawable.image3,
+                R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,
+                R.drawable.image3, R.drawable.image3, R.drawable.image3,R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3};
+
+
+        Typeface font;
+        BurlingtonMallCustomAdapter(Context context, String[] restaurants, Integer[] images) {
+
+            super(context, R.layout.burlingtonmallcustomrow, restaurants);
+            font= Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf");
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            LayoutInflater squareOneInflater = LayoutInflater.from(getContext());
+            View customView = squareOneInflater.inflate(R.layout.burlingtonmallcustomrow, parent, false);
+
+            String singleFoodItem = getItem(position);
+
+            TextView burlingtonmallText = (TextView) customView.findViewById(R.id.burlingtonmallPlaceText);
+
+
+            ImageView burlingtonmallImage = (ImageView) customView.findViewById(R.id.burlingtonmallPlaceImage); //buckysImage is after the .id
+
+
+            burlingtonmallText.setText(singleFoodItem);
+            burlingtonmallText.setTypeface(font);
+
+            burlingtonmallImage.setImageResource(imageId[position]);
+            return customView;
+        }
+    }
 }

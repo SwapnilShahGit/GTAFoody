@@ -5,12 +5,18 @@ package com.example.swapnil.squareonemenu;
  */
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 
 public class EatonCentre extends Activity {
@@ -44,7 +50,7 @@ public class EatonCentre extends Activity {
         // Second param is the resource Id for list layout row item
         // Third param is input array
 
-        eatoncentreAdapter = new SquareOneCustomAdapter(this, list_restaurants, imageId);
+        eatoncentreAdapter = new SquareOne.SquareOneCustomAdapter(this, list_restaurants, imageId);
 
         eatoncentreListView = (ListView) findViewById(R.id.squareOneListView);
 
@@ -62,11 +68,52 @@ public class EatonCentre extends Activity {
                             startActivity(new Intent(EatonCentre.this, NameOfClass));
                         }
                         catch (ClassNotFoundException e){
-                            startActivity(new Intent(EatonCentre.this, Starbucks.class));
+                            startActivity(new Intent(EatonCentre.this, MainActivity.class));
                         }
                     }
                 });
 
 
     };
+
+    public static class EatonCentreCustomAdapter extends ArrayAdapter<String>{
+
+        Integer[] imageId = {R.drawable.aw, R.drawable.amaya, R.drawable.image3,
+                R.drawable.bigsmokeburger,
+                R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3, R.drawable.image3,
+                R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,
+                R.drawable.image3, R.drawable.image3, R.drawable.image3,R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3};
+
+        Typeface font;
+        EatonCentreCustomAdapter(Context context, String[] restaurants, Integer[] images) {
+
+            super(context, R.layout.eatoncentrecustomrow, restaurants);
+            font= Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf");
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            LayoutInflater squareOneInflater = LayoutInflater.from(getContext());
+            View customView = squareOneInflater.inflate(R.layout.eatoncentrecustomrow, parent, false);
+
+            String singleFoodItem = getItem(position);
+
+            TextView eatoncentreText = (TextView) customView.findViewById(R.id.eatoncentrePlaceText);
+
+
+            ImageView eatoncentreImage = (ImageView) customView.findViewById(R.id.eatoncentrePlaceImage); //buckysImage is after the .id
+
+
+            eatoncentreText.setText(singleFoodItem);
+            eatoncentreText.setTypeface(font);
+
+            eatoncentreImage.setImageResource(imageId[position]);
+            return customView;
+        }
+    }
 }

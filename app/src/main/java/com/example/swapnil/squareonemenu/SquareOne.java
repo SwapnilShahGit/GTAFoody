@@ -5,12 +5,18 @@ package com.example.swapnil.squareonemenu;
  */
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 
 public class    SquareOne extends Activity {
@@ -61,11 +67,52 @@ public class    SquareOne extends Activity {
                             startActivity(new Intent(SquareOne.this, NameOfClass));
                         }
                         catch (ClassNotFoundException e){
-                            startActivity(new Intent(SquareOne.this, Starbucks.class));
+                            startActivity(new Intent(SquareOne.this, MainActivity.class));
                         }
                     }
                     });
 
 
                 };
+
+    static class SquareOneCustomAdapter extends ArrayAdapter<String> {
+
+        Integer[] imageId = {R.drawable.aw, R.drawable.amaya, R.drawable.image3,
+                R.drawable.bigsmokeburger,
+                R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3, R.drawable.image3,
+                R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,
+                R.drawable.image3, R.drawable.image3, R.drawable.image3,R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3,R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3, R.drawable.image3,R.drawable.image3,
+                R.drawable.image3,R.drawable.image3};
+
+        Typeface font;
+        SquareOneCustomAdapter(Context context, String[] restaurants, Integer[] images) {
+
+            super(context, R.layout.squareonecustomrow, restaurants);
+            font= Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf");
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            LayoutInflater squareOneInflater = LayoutInflater.from(getContext());
+            View customView = squareOneInflater.inflate(R.layout.squareonecustomrow, parent, false);
+
+            String singleFoodItem = getItem(position);
+
+            TextView squareOneText = (TextView) customView.findViewById(R.id.squareOnePlaceText);
+
+
+            ImageView squareOneImage = (ImageView) customView.findViewById(R.id.squareOnePlaceImage); //buckysImage is after the .id
+
+
+            squareOneText.setText(singleFoodItem);
+            squareOneText.setTypeface(font);
+
+            squareOneImage.setImageResource(imageId[position]);
+            return customView;
+        }
     }
+}

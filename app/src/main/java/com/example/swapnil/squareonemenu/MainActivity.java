@@ -1,12 +1,16 @@
 package com.example.swapnil.squareonemenu;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -40,7 +44,7 @@ public class MainActivity extends Activity {
         // Second param is the resource Id for list layout row item
         // Third param is input array
 
-        foodyAdapter = new CustomAdapter(this, list_restaurants, imageId);
+        foodyAdapter = new MainActivityCustomAdapter(this, list_restaurants, imageId);
 
         foodyListView = (ListView) findViewById(R.id.foodyListView);
 
@@ -59,7 +63,7 @@ public class MainActivity extends Activity {
                             startActivity(new Intent(MainActivity.this, NameOfClass));
                         }
                         catch (ClassNotFoundException e){
-                            startActivity(new Intent(MainActivity.this, Starbucks.class));
+                            startActivity(new Intent(MainActivity.this, MainActivity.class));
                         }
 
 
@@ -96,7 +100,6 @@ public class MainActivity extends Activity {
                     case "Basil Box":
                         URLVariable = "";
                         return "com.example.swapnil.squareonemenu.Amaya_Express";
-
                     case "Big Smoke Burger":
                         URLVariable = "http://www.bigsmokeburger.com/menu/";
                         return "com.example.swapnil.squareonemenu.Big_Smoke_Burger";
@@ -125,8 +128,10 @@ public class MainActivity extends Activity {
                         URLVariable = "http://www.jimmythegreek.com/";
                         return "com.example.swapnil.squareonemenu.Jimmy_The_Greek";
                     case "KFC":
-                        URLVariable = "http://www.kfc.ca/menu/index.aspx?gclid=Cj0KEQjw4qqrBRDE2K_z7Pbvjo8BEiQA39AImdM9HaLAaStv6y0OjumV1r8AAdHYtA83Uzoo-nOtKd0aAgun8P8HAQ";
-                        return "com.example.swapnil.squareonemenu.KFC";
+                        URLVariable = "http://www.kfc.ca/menu/index.aspx?gclid=Cj0KEQ" +
+                                "jw4qqrBRDE2K_z7Pbvjo8BEiQA39AImdM9HaLAaStv6y0OjumV1r8AAdHYtA" +
+                                "83Uzoo-nOtKd0aAgun8P8HAQ";
+                        return "com.example.swapnil.squareonemenu.Amaya_Express";
                     case "Manchu Wok":
                         URLVariable = "http://www.manchuwok.com/menu/";
                         return "com.example.swapnil.squareonemenu.Manchu_Wok";
@@ -170,4 +175,48 @@ public class MainActivity extends Activity {
                 return "Not matching string";
             }
 
+    static class MainActivityCustomAdapter extends ArrayAdapter<String> {
+
+        Integer[] imageId = {R.drawable.image, R.drawable.image, R.drawable.image,
+                R.drawable.image,
+                R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image, R.drawable.image2,
+                R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,
+                R.drawable.image, R.drawable.image2, R.drawable.image,R.drawable.image,R.drawable.image,
+                R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,
+                R.drawable.image,R.drawable.image, R.drawable.image,R.drawable.image,
+                R.drawable.image,R.drawable.image, R.drawable.image,R.drawable.image,
+                R.drawable.image,R.drawable.image, R.drawable.image,R.drawable.image,
+                R.drawable.image,R.drawable.image};
+
+        Typeface font;
+        MainActivityCustomAdapter(Context context, String[] restaurants, Integer[] images) {
+
+            super(context, R.layout.custom_row, restaurants);
+            font= Typeface.createFromAsset(context.getAssets(), "Roboto-Light.ttf");
+
+
+
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            LayoutInflater foodyInflater = LayoutInflater.from(getContext());
+            View customView = foodyInflater.inflate(R.layout.custom_row, parent, false);
+
+            String singleFoodItem = getItem(position);
+
+            TextView foodyText = (TextView) customView.findViewById(R.id.foodyText);
+
+
+            ImageView foodyImage = (ImageView) customView.findViewById(R.id.foodyImage); //buckysImage is after the .id
+
+
+            foodyText.setText(singleFoodItem);
+            foodyText.setTypeface(font);
+
+
+            foodyImage.setImageResource(imageId[position]);
+            return customView;
+        }
+    }
 }
