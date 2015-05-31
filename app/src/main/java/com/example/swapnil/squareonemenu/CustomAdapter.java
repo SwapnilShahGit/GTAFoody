@@ -49,8 +49,6 @@ class CustomAdapter extends ArrayAdapter<String> {
         foodyText.setTypeface(font);
 
 
-
-
         foodyImage.setImageResource(imageId[position]);
         return customView;
     }

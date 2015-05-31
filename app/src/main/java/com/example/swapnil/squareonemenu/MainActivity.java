@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
+    public static String URLVariable = "";
     String[] list_restaurants = {"Square One", "Mapleview Mall", "Burlington Mall", "Eaton Centre",
             "Sherway Gardens", "Yorkdale Mall", "Erin Mills Centre"};
 
@@ -87,8 +88,10 @@ public class MainActivity extends Activity {
                     case "Erin Mills Centre":
                         return "com.example.swapnil.squareonemenu.ErinMillsTownCentre";
                     case "A&W":
+                        URLVariable = "http://www.aw.ca/mobile.nsf/menu";
                         return "com.example.swapnil.squareonemenu.AW";
                     case "Amaya Express":
+                        URLVariable = "http://www.amayarestaurant.com/amayaex/index.php?pg=takeout";
                         return "com.example.swapnil.squareonemenu.Amaya_Express";
                     case "Basil Box":
                         return "com.example.swapnil.squareonemenu.Amaya_Express";

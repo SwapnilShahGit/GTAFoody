@@ -16,12 +16,11 @@ public class Amaya_Express extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_amaya_express);
 
-        String amayaURL = "http://www.amayarestaurant.com/amayaex/index.php?pg=takeout";
         WebView amayaview = (WebView) this.findViewById(R.id.amayawebView);
         amayaview.getSettings().setJavaScriptEnabled(true);
         amayaview.getSettings().setBuiltInZoomControls(true);
         amayaview.getSettings().setDisplayZoomControls(false);
-        amayaview.loadUrl(amayaURL);
+        amayaview.loadUrl(MainActivity.URLVariable);
 
     }
 
