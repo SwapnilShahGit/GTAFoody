@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.swapnil.squareonemenu" >
-    
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    package="com.Oguzhan.Swapnil.GTAFoody"
+    android:versionCode="5"
+    android:versionName="1.4" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +16,19 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".BurlingtonMall"
+            android:label="@string/title_activity_burlington_mall" >
+        </activity>
+        <activity
+            android:name=".Store_Menu"
+            android:label=""
+            android:theme="@android:style/Theme.Holo" >
+        </activity>
+        <activity
+            android:name=".IntroActivity"
+            android:label="GTA Foody" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,40 +36,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity_chipotle"
-            android:label="@string/title_activity_activity_chipotle" >
-        </activity>
-        <activity
-            android:name=".Amaya_Express"
-            android:label="@string/title_activity_amaya__express" >
-        </activity>
-        <activity
-            android:name=".BurlingtonMall"
-            android:label="@string/title_activity_burlington_mall" >
-        </activity>
-        <activity
-            android:name=".SquareOne"
-            android:label="@string/title_activity_square_one" >
-        </activity>
-        <activity
-            android:name=".Mapleview"
-            android:label="@string/title_activity_mapleview" >
-        </activity>
-        <activity
-            android:name=".ErinMillsTownCentre"
-            android:label="@string/title_activity_erin_mills_town_centre" >
-        </activity>
-        <activity
-            android:name=".EatonCentre"
-            android:label="@string/title_activity_eaton_centre" >
-        </activity>
-        <activity
-            android:name=".SherwayGardens"
-            android:label="@string/title_activity_sherway_gardens" >
-        </activity>
-        <activity
-            android:name=".YorkdaleMall"
-            android:label="@string/title_activity_yorkdale_mall" >
+            android:name=".MallHours"
+            android:label="@string/title_activity_mall_hours" >
         </activity>
     </application>
 

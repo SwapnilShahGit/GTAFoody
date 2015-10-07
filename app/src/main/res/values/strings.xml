@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SquareOneMenu</string>
+    <string name="app_name">GTA Foody</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -38,4 +38,9 @@
     <string name="title_activity_yorkdale_mall">YorkdaleMall</string>
     <string name="title_activity_freshly_squeezed">FreshlySqueezed</string>
     <string name="title_activity_orange__julius">Orange_Julius</string>
+    <string name="title_activity_cambridge_centre">CambridgeCentre</string>
+    <string name="title_activity_store__menu">Store_Menu</string>
+    <string name="title_activity_intro">IntroActivity</string>
+    <string name="title_activity_mall_hours">MallHours</string>
+    <string name="title_activity_mallsand_restauraunts">MallsandRestaurauntsActivity</string>
 </resources>
